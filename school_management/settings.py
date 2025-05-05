@@ -81,20 +81,20 @@ WSGI_APPLICATION = 'school_management.wsgi.application'
 
 # Database
 
-DATABASES = {
-    'default': dj_database_url.parse(config('DATABASE_URL'), conn_max_age=600),
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django_tenants.postgresql_backend', 
-#         'NAME': 'db',
-#         'USER': 'haze',
-#         'PASSWORD': '12345',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
+#     'default': dj_database_url.parse(config('DATABASE_URL'), conn_max_age=600),
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django_tenants.postgresql_backend', 
+        'NAME': 'db',
+        'USER': 'haze',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
